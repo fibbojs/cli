@@ -15,11 +15,11 @@ npx fibbo
 ```
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/@fibbojs/cli/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/@fibbojs/cli
+[npm-version-src]: https://img.shields.io/npm/v/fibbo/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/fibbo
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/@fibbojs/cli.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/@fibbojs/cli
+[npm-downloads-src]: https://img.shields.io/npm/dm/fibbo.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/fibbo
 
-[license-src]: https://img.shields.io/npm/l/@fibbojs/cli.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/@fibbojs/cli
+[license-src]: https://img.shields.io/npm/l/fibbo.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/fibbo

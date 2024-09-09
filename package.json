@@ -1,0 +1,24 @@
+{
+  "name": "fibbo",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "The CLI for the Fibbo game engine",
+  "author": "Augustin Mercier 'Gugustinette' <mercier.augustin@outlook.fr>",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://fibbojs.github.io/fibbo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibbojs/cli.git"
+  },
+  "bugs": "https://github.com/fibbojs/cli/issues",
+  "main": "dist/index.js",
+  "bin": {
+    "fibbo": "bin/index.mjs"
+  },
+  "scripts": {
+    "dev": "npx ."
+  }
+}

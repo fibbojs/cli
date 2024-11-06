@@ -1,0 +1,42 @@
+# Workflow to publish a new release to NPM
+#
+name: Publish to NPM
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write # Needed for provenance data generation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      # Build CLI
+      - name: Build
+        run: npm run build
+      # Configure Git for automated commits
+      - name: Configuring Git
+        run: git config --global user.name "GitHub CD bot" && git config --global user.email "github-cd-bot@users.noreply.github.com"
+      # Bump package version
+      - name: Bump package version
+        run: npm version ${{ github.event.release.tag_name }}
+      # Publish packages to NPM
+      - name: Publish package to NPM
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: false
+      # Push changes to GitHub (updated package.json,...)
+      - name: Push changes to GitHub
+        run:
+          git add package.json package-lock.json
+          git commit -m "Release v${{ github.event.release.tag_name }}"
+          git push

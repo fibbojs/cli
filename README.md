@@ -11,7 +11,7 @@ This repository contains the source code of the Fibbo CLI, the command line inte
 To start the Fibbo CLI, you can use the following command:
 
 ```bash
-npx fibbo
+npx fibbo <command> [options]
 ```
 
 ## Development

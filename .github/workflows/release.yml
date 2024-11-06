@@ -27,7 +27,7 @@ jobs:
         run: git config --global user.name "GitHub CD bot" && git config --global user.email "github-cd-bot@users.noreply.github.com"
       # Bump package version
       - name: Bump package version
-        run: npm version ${{ github.event.release.tag_name }}
+        run: npm version ${{ github.event.release.tag_name }} --git-tag-version=false
       # Publish packages to NPM
       - name: Publish package to NPM
         run: npm publish

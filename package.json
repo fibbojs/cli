@@ -14,11 +14,27 @@
     "url": "git+https://github.com/fibbojs/cli.git"
   },
   "bugs": "https://github.com/fibbojs/cli/issues",
-  "main": "dist/index.js",
   "bin": {
     "fibbo": "bin/index.mjs"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "dev": "npx ."
+    "dev": "unbuild && npx .",
+    "fibbo": "unbuild && npx .",
+    "build": "unbuild"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "unbuild": "^2.0.0"
   }
 }

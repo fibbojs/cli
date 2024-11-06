@@ -14,6 +14,29 @@ To start the Fibbo CLI, you can use the following command:
 npx fibbo
 ```
 
+## Development
+
+- Install the dependencies
+  ```bash
+  npm install
+  ```
+
+- Run commands
+
+  To test the Fibbo CLI locally :
+
+  ```bash
+  npm run fibbo <command> [options]
+  ```
+
+  For example :
+
+  ```bash
+  npm run fibbo help
+  npm run fibbo init 2d my-new-game
+  npm run fibbo upgrade
+  ```
+
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/fibbo/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
 [npm-version-href]: https://npmjs.com/package/fibbo

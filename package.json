@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "description": "The CLI for the Fibbo game engine",
-  "author": "Augustin Mercier 'Gugustinette' <mercier.augustin@outlook.fr>",
+  "author": "Augustin Mercier 'Gugustinette' <mercier.augustin@proton.me>",
   "license": "Apache-2.0",
   "publishConfig": {
     "access": "public"

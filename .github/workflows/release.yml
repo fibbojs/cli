@@ -30,7 +30,7 @@ jobs:
         run: npm version ${{ github.event.release.tag_name }} --git-tag-version=false
       # Publish packages to NPM
       - name: Publish package to NPM
-        run: npm publish
+        run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: false

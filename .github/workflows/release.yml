@@ -38,5 +38,5 @@ jobs:
       - name: Push changes to GitHub
         run:
           git add package.json package-lock.json
-          git commit -m "Release v${{ github.event.release.tag_name }}"
-          git push
+          && git commit -m "Release v${{ github.event.release.tag_name }}"
+          && git push

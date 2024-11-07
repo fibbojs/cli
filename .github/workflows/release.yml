@@ -29,11 +29,11 @@ jobs:
       - name: Bump package version
         run: npm version ${{ github.event.release.tag_name }} --git-tag-version=false
       # Publish packages to NPM
-      - name: Publish package to NPM
-        run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_PROVENANCE: false
+      - uses: JS-DevTools/npm-publish@v3
+        with:
+          access: public
+          token: ${{ secrets.NPM_TOKEN }}
+          provenance: false
       # Push changes to GitHub (updated package.json,...)
       - name: Push changes to GitHub
         run:
